@@ -1,4 +1,4 @@
-package cc.somkiat.basicunittesting;
+package cc.somkiat.basicunittesting.validation;
 
 import android.util.Patterns;
 

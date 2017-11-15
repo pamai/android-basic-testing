@@ -1,4 +1,4 @@
-package cc.somkiat.basicunittesting;
+package cc.somkiat.basicunittesting.validation;
 
 import cc.somkiat.basicunittesting.exception.EmptyEmailException;
 import cc.somkiat.basicunittesting.exception.UserException;

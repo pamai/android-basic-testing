@@ -22,23 +22,8 @@ public class UserProfile {
         return user;
     }
 
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public Date getBirthday() {
-        return birthDay;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthDay = birthday;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }

@@ -6,8 +6,10 @@ import org.junit.Test;
 import java.util.Date;
 
 import cc.somkiat.basicunittesting.exception.EmptyNameException;
+import cc.somkiat.basicunittesting.exception.InvalidNameException;
 import cc.somkiat.basicunittesting.model.UserProfile;
 import cc.somkiat.basicunittesting.validation.EmptyNameValidate;
+import cc.somkiat.basicunittesting.validation.InvalidNameValidate;
 
 public class NameValidationTest {
 
@@ -17,4 +19,12 @@ public class NameValidationTest {
         EmptyNameValidate emptyNameValidate = new EmptyNameValidate();
         emptyNameValidate.validate(user);
     }
+
+    @Test(expected = InvalidNameException.class)
+    public void InvalidNameInputMustThrowError() throws InvalidNameException {
+        UserProfile user = new UserProfile("test123", new Date(), "");
+        InvalidNameValidate invalidNameValidate = new InvalidNameValidate();
+        invalidNameValidate.validate(user);
+    }
+
 }

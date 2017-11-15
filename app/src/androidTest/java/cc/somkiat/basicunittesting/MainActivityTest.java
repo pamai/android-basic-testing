@@ -61,4 +61,15 @@ public class MainActivityTest {
                 check(matches(isDisplayed()));
     }
 
+    @Test
+    public void invalidNameTest(){
+        Espresso.closeSoftKeyboard();
+        onView(withId(R.id.revertButton)).perform(scrollTo(), click());
+        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("Robot101"));
+        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("pamai_5656@hotmail.com"));
+        onView(withId(R.id.saveButton)).perform(scrollTo(), click());
+        onView(withText("Invalid Name")).
+                inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).
+                check(matches(isDisplayed()));
+    }
 }

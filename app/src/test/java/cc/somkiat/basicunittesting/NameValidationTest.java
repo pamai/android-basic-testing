@@ -27,4 +27,13 @@ public class NameValidationTest {
         invalidNameValidate.validate(user);
     }
 
+    @Test
+    public void CorrectNameInputMustThrowNothing() throws InvalidNameException, EmptyNameException {
+        UserProfile user = new UserProfile("Paniti", new Date(), "");
+        EmptyNameValidate emptyNameValidate = new EmptyNameValidate();
+        emptyNameValidate.validate(user);
+        InvalidNameValidate invalidNameValidate = new InvalidNameValidate();
+        invalidNameValidate.validate(user);
+    }
+
 }

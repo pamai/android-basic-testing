@@ -84,4 +84,16 @@ public class MainActivityTest {
                 inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).
                 check(matches(isDisplayed()));
     }
+
+    @Test
+    public void invalidEmailTest(){
+        Espresso.closeSoftKeyboard();
+        onView(withId(R.id.revertButton)).perform(scrollTo(), click());
+        onView(withId(R.id.userNameInput)).perform(scrollTo() ,replaceText("Paniti"));
+        onView(withId(R.id.emailInput)).perform(scrollTo(), replaceText("not_a_email"));
+        onView(withId(R.id.saveButton)).perform(scrollTo(), click());
+        onView(withText("Invalid Email")).
+                inRoot(withDecorView(not(is(mActivityTestRule.getActivity().getWindow().getDecorView())))).
+                check(matches(isDisplayed()));
+    }
 }

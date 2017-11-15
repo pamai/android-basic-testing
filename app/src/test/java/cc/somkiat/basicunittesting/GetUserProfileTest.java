@@ -21,8 +21,4 @@ public class GetUserProfileTest {
         assertEquals(email, user.getEmail());
     }
 
-    @Test
-    public void activity(){
-        MainActivity mainActivity = new MainActivity();
-    }
 }

@@ -2,9 +2,6 @@ package cc.somkiat.basicunittesting.model;
 
 import java.util.Date;
 
-/**
- * Created by pamai on 11/14/2017.
- */
 
 public class UserProfile {
 
